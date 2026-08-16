@@ -1,0 +1,41 @@
+# PipePrice V5.0 — Kiểm tra giá MEP
+
+Công cụ dự toán và **kiểm tra giá vật tư MEP** chạy hoàn toàn trên trình duyệt, không cần server, không cần cài đặt. Một file HTML duy nhất, không phụ thuộc thư viện ngoài.
+
+> Quy đổi giá **ống thép, phụ kiện thép và cáp điện đồng** từ đơn giá vật liệu thị trường sang giá mục tiêu, rồi so sánh với báo giá nhà thầu.
+
+## Tính năng
+
+- **Tính giá ống thép** theo tiêu chuẩn BS 1387 (Medium/Heavy) và ASME B36.10 (SCH10/20/40/80), quy đổi từ giá thép cuộn sang ống thành phẩm qua hệ số hiệu chỉnh.
+- **Tính giá phụ kiện thép** (cút, tê, côn, bích JIS 10K, nắp bịt, coupling…) theo bảng khối lượng DN hoặc ước tính hình học, cộng chi phí chế tạo/sơn mạ.
+- **Tính giá cáp điện đồng** (CV/CVV/CXV/CXV-LSHF) theo khối lượng đồng (8,96 g/cm³), cộng vỏ/cách điện, giáp/màn chắn, gia công.
+- **Dự toán BOQ**: gộp nhiều hạng mục, khóa đơn giá mục tiêu theo từng dòng tại thời điểm thêm.
+- **Import báo giá Excel `.xlsx`** trực tiếp trong trình duyệt (tự nhận diện cột, không cần thư viện).
+- **Xuất CSV**, **in A4**, **sao lưu/khôi phục BOQ** dạng JSON.
+- Lưu tự động vào `localStorage`; giao diện tiếng Việt, responsive, hỗ trợ nhập số kiểu Việt/Anh.
+
+## Sử dụng
+
+Mở trực tiếp `index.html` bằng trình duyệt là dùng được ngay. Không cần build, không cần cài gì.
+
+> ⚠️ Chức năng **Import Excel** cần trình duyệt hỗ trợ `DecompressionStream` (Chrome/Edge/Firefox bản mới, Safari 16.4+).
+
+## Đưa lên GitHub Pages
+
+1. Tạo repository mới trên GitHub và tải toàn bộ file trong thư mục này lên (kéo-thả cũng được).
+2. Vào **Settings → Pages**.
+3. Mục **Source** chọn nhánh `main` (hoặc `master`), thư mục `/ (root)`, rồi **Save**.
+4. Chờ vài phút, truy cập địa chỉ dạng `https://<tên-tài-khoản>.github.io/<tên-repo>/`.
+
+Vì `index.html` nằm ở gốc nên GitHub Pages sẽ tự phục vụ.
+
+## Cơ sở dữ liệu quy cách
+
+- Ống: `W = 0,02466 × t × (D − t)` — BS 1387 / EN 10255, ASME B36.10M
+- Cáp: `kg Cu/m = 0,00896 × S × số lõi × hệ số bện` — khối lượng riêng đồng 8,96 g/cm³
+
+> Khối lượng và giá là dự toán lý thuyết. Vật liệu, dung sai, cấu tạo và vận chuyển cần xác nhận theo báo giá nhà cung cấp thực tế.
+
+## Tác giả
+
+Phát triển bởi **Nguyễn Trọng Ngọc**.
