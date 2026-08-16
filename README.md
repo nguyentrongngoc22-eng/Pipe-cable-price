@@ -29,6 +29,17 @@ Mở trực tiếp `index.html` bằng trình duyệt là dùng được ngay. K
 
 Vì `index.html` nằm ở gốc nên GitHub Pages sẽ tự phục vụ.
 
+## Cài đặt lên điện thoại (PWA)
+
+App hỗ trợ cài như ứng dụng (biểu tượng ngoài màn hình chính, chạy toàn màn hình, dùng offline). **Bắt buộc mở qua địa chỉ GitHub Pages (HTTPS) — không cài được khi mở file trực tiếp trên máy.**
+
+- **Android (Chrome):** mở link Pages → menu ⋮ → **Cài đặt ứng dụng / Thêm vào màn hình chính**.
+- **iPhone (Safari):** mở link Pages → nút **Chia sẻ** → **Thêm vào màn hình chính**.
+
+Thành phần PWA đi kèm: `manifest.webmanifest`, `sw.js` (service worker, cache offline), `icon-192.png`, `icon-512.png`. Tất cả để phẳng cùng thư mục với `index.html`.
+
+> Khi cập nhật app, đổi số `CACHE` trong `sw.js` (ví dụ `pipeprice-v5-1`) để trình duyệt tải lại bản mới.
+
 ## Cơ sở dữ liệu quy cách
 
 - Ống: `W = 0,02466 × t × (D − t)` — BS 1387 / EN 10255, ASME B36.10M
