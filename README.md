@@ -9,7 +9,7 @@ Công cụ dự toán và **kiểm tra giá vật tư MEP** chạy hoàn toàn t
 - **Tính giá ống thép** theo tiêu chuẩn BS 1387 (Medium/Heavy) và ASME B36.10 (SCH10/20/40/80), quy đổi từ giá thép cuộn sang ống thành phẩm qua hệ số hiệu chỉnh.
 - **Tính giá phụ kiện thép** (cút, tê, côn, bích JIS 10K, nắp bịt, coupling…) theo bảng khối lượng DN hoặc ước tính hình học, cộng chi phí chế tạo/sơn mạ.
 - **Tính giá cáp điện đồng** (CV/CVV/CXV/CXV-LSHF) theo khối lượng đồng (8,96 g/cm³), cộng vỏ/cách điện, giáp/màn chắn, gia công.
-- **Tính giá ống gió tôn kẽm** (chữ nhật W×H hoặc tròn Ø) theo **2 dạng: theo mét dài (đ/m) và theo mét vuông (đ/m²)**; tự chọn chiều dày tôn theo cạnh lớn nhất (SMACNA), quy đổi khối lượng tôn (7,85 kg/m²·mm), cộng gia công, mặt bích/gông/treo đỡ, hao hụt, vận chuyển và O&P.
+- **Tính giá ống gió tôn kẽm** (chữ nhật W×H hoặc tròn Ø) theo **2 dạng: theo mét dài (đ/m) và theo mét vuông (đ/m²)**; tự chọn chiều dày tôn theo cạnh lớn nhất (SMACNA), quy đổi khối lượng tôn (7,85 kg/m²·mm), cộng gia công, mặt bích/gông/bulông (gắn liền ống → tính vào vật tư), hao hụt, vận chuyển và O&P. **Treo đỡ tách riêng thành chi phí lắp đặt** (chỉ cộng khi báo giá là "vật tư + lắp đặt"), giống cơ chế cấp vật tư / lắp đặt của ống thép.
 - **Dự toán BOQ**: gộp nhiều hạng mục, khóa đơn giá mục tiêu theo từng dòng tại thời điểm thêm.
 - **Import báo giá Excel `.xlsx`** trực tiếp trong trình duyệt (tự nhận diện cột, không cần thư viện).
 - **Xuất CSV**, **in A4**, **sao lưu/khôi phục BOQ** dạng JSON.
