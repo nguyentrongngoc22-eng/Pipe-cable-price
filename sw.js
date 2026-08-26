@@ -1,5 +1,5 @@
 // PipePrice V5.0 — service worker (cache-first, offline-capable)
-const CACHE = "pipeprice-v5-4";
+const CACHE = "pipeprice-v5-5";
 const ASSETS = [
   "./",
   "./index.html",
